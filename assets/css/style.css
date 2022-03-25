@@ -20,21 +20,79 @@ body {
   background-color: var(--bg_body);
   font-family: Arial, Helvetica, sans-serif;
 }
+.container {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: var(--bg_containers);
+}
 
+/* Background fittizi (poi li togli) */
+.bg_light {
+    background-color: var(--bg_borders);
+}
+.bg_dark {
+    background-color: var(--bg_details);
+}
+
+/* Utilities Testi e Titoli */
 h2 {
   color: var(--h2_colors);
 }
-
 h2,
 h3 {
   text-transform: uppercase;
 }
 
-/* Utilities */
+
+/* Utilities - position */
+.rel {
+  position: relative;
+}
+.abs_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Float + clearfix */
+.d_float {
+    float: left;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Utilities - Larghezza */
+.w_100 {
+    width: 100%;
+}
+.w_90 {
+    width: 90%;
+}
+
+/* Utilities - Altezza */
+.h_sm {
+    height: 15%;
+}
+.h_md {
+    height: 30%;
+}
+.h_lg {
+    height: 40%;
+}
+
+/* Padding e Margin */
 .pt_2 {
   padding-top: 2rem;
 }
-
 .pb_2 {
   padding-bottom: 2rem;
+}
+.pb_1 {
+  padding-bottom: 1rem;
 }
