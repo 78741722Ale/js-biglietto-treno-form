@@ -1,0 +1,40 @@
+/* Regola generale */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Elemento radice */
+:root {
+  --bg_body: #b91450;
+  --bg_details: #808080;
+  --bg_borders: #cb4f7c;
+  --bg_genera: #cccccc;
+  --genera_colors: #bb2d60;
+  --h2_colors: rgb(255, 255, 255);
+  --bg_containers: rgb(255, 255, 255);
+}
+
+body {
+  background-color: var(--bg_body);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  color: var(--h2_colors);
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+/* Utilities */
+.pt_2 {
+  padding-top: 2rem;
+}
+
+.pb_2 {
+  padding-bottom: 2rem;
+}
