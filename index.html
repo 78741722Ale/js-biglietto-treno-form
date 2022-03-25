@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,27 +9,76 @@
     <!-- Titolo pagina -->
     <title>js-biglietto-treno-form</title>
 </head>
+
 <body>
-    
+
     <div class="container clearfix">
-        <!-- Titolo del contenuto - Calcola il prezzo -->
-        <div class="row h_sm w_100 bg_dark">
-        
+        <!-- Titolo del contenuto - Calcola il prezzo del tuo biglietto -->
+        <div class="row h_sm w_100 d_flex justify_center align_center">
+            <h2>Calcola il prezzo del tuo biglietto</h2>
         </div>
         <!-- Primo container - calcola il prezzo del tuo biglietto -->
-        <div class="row h_lg w_100 bg_light">
-        
+        <div class="row br_sm h_md w_100 bg_light d_float clearfix">
+            <!-- Dati Input -->
+            <div class="col w_70 m_auto h_50 d_flex">
+                <!-- Input nome e cognome -->
+                <div class="card w_33 text_center h_100 d_flex justify_center align_end">
+                    <form action="#">
+                        <label class="span_light" for="fname">Nome Cognome</label>
+                        <input class="mt_1 text_center border_style" type="text" id="fname" name="fname"
+                            placeholder="Inserisci">
+                    </form>
+                </div>
+                <!-- Input km da percorrere -->
+                <div class="card w_33 text_center h_100 d_flex justify_center align_end">
+                    <form action="#">
+                        <label class="span_light" for="fname">Km da Percorrere</label>
+                        <input class="mt_1 text_center border_style" type="tel" id="fname" name="Kilometers"
+                            placeholder="Inserisci">
+                    </form>
+                </div>
+                <!-- selezione fascia d'età -->
+                <div class="card w_33 text_center h_100 d_flex justify_center align_end">
+                    <form action="#">
+                        <label class="span_light" for="Age">Fascia d'età</label><br>
+                        <select class="mt_1 text_center border_style" id="Age">
+                            <option value="Minorenne">Minorenne</option>
+                            <option value="Maggiorenne">Maggiorenne</option>
+                            <option value="Anziano">Anziano</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <!-- Bottoni Genera e annulla -->
+            <div class="col w_33 m_auto h_50 d_flex justify_evenly align_center">
+                <!-- Bottone Genera -->
+                <button class="border_style_genera" id="genera">Genera</button>
+                <!-- Bottone Annulla -->
+                <button class="border_style_genera" id="annulla">Annulla</button>
+            </div>
         </div>
-        
-        <!-- Titolo del contenuto - dettagli del tuo biglietto -->
-        <div class="row h_sm w_100 bg_dark">
-        
+
+        <!-- Secondo titolo - il tuo biglietto -->
+        <div class="row h_sm w_100 d_flex justify_center align_end">
+            <h2>il tuo biglietto</h2>
         </div>
+
         <!-- Secondo container - il tuo biglietto -->
-        <div class="row h_md w_100 bg_light">
-        
+        <div class="row h_lg w_100 bg_light d_flex flex_wrap justify_center">
+            <!-- titolo dettaglio passeggeri -->
+            <div class="col h_20 bg_dark w_90 m_auto">
+                <!-- Titolo -->
+                <div class="card w_100 d_flex align_end">
+                    <h3>Dettaglio Passeggeri</h3>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
+
+
 
     <!-- Link a Javascript -->
     <script src="./assets/js/main.js"></script>
