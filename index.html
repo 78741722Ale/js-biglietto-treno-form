@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,37 +12,35 @@
 </head>
 
 <body>
-
-    <div class="container clearfix">
-        <!-- Titolo del contenuto - Calcola il prezzo del tuo biglietto -->
+    <!-- Layout principale -->
+    <main class="container">
+        <!-- Primo titolo - Calcola il prezzo del tuo biglietto -->
         <div class="row h_sm w_100 d_flex justify_center align_center">
-            <h2>Calcola il prezzo del tuo biglietto</h2>
+            <h2 class="uppercase">Calcola il prezzo del tuo biglietto</h2>
         </div>
         <!-- Primo container - calcola il prezzo del tuo biglietto -->
         <div class="row br_sm h_md w_100 bg_light d_float clearfix">
             <!-- Dati Input -->
-            <div class="col w_70 m_auto h_50 d_flex">
+            <div class="col w_70 m_auto h_50 d_flex justify_evenly">
                 <!-- Input nome e cognome -->
                 <div class="card w_33 text_center h_100 d_flex justify_center align_end">
                     <form action="#">
                         <label class="span_light" for="fname">Nome Cognome</label>
-                        <input class="mt_1 text_center border_style" type="text" id="fname" name="fname"
-                            placeholder="Inserisci">
+                        <input class="mt_1 w_90 text_center border_style" type="text" id="fname" name="fname" placeholder="Inserisci">
                     </form>
                 </div>
                 <!-- Input km da percorrere -->
                 <div class="card w_33 text_center h_100 d_flex justify_center align_end">
                     <form action="#">
                         <label class="span_light" for="fname">Km da Percorrere</label>
-                        <input class="mt_1 text_center border_style" type="tel" id="fname" name="Kilometers"
-                            placeholder="Inserisci">
+                        <input class="mt_1 w_90 text_center border_style" type="tel" id="fname" name="Kilometers" placeholder="Inserisci">
                     </form>
                 </div>
                 <!-- selezione fascia d'età -->
                 <div class="card w_33 text_center h_100 d_flex justify_center align_end">
                     <form action="#">
                         <label class="span_light" for="Age">Fascia d'età</label><br>
-                        <select class="mt_1 text_center border_style" id="Age">
+                        <select class="mt_1 w_90 text_center border_style" id="Age">
                             <option value="Minorenne">Minorenne</option>
                             <option value="Maggiorenne">Maggiorenne</option>
                             <option value="Anziano">Anziano</option>
@@ -57,28 +56,72 @@
                 <button class="border_style_genera" id="annulla">Annulla</button>
             </div>
         </div>
-
         <!-- Secondo titolo - il tuo biglietto -->
-        <div class="row h_sm w_100 d_flex justify_center align_end">
-            <h2>il tuo biglietto</h2>
+        <div class="row h_sm w_100 d_flex justify_center align_end mb_1">
+            <h2 class="uppercase">il tuo biglietto</h2>
         </div>
-
         <!-- Secondo container - il tuo biglietto -->
         <div class="row h_lg w_100 bg_light d_flex flex_wrap justify_center">
             <!-- titolo dettaglio passeggeri -->
-            <div class="col h_20 bg_dark w_90 m_auto">
-                <!-- Titolo -->
-                <div class="card w_100 d_flex align_end">
-                    <h3>Dettaglio Passeggeri</h3>
+            <div class="col h_20 w_90 m_auto d_flex align_end">
+                <h3 class="uppercase">Dettaglio Passeggeri</h3>
+            </div>
+            <!-- Contenuto -->
+            <div class="col h_80 w_90 m_auto d_flex">
+                <!-- Nome passeggero -->
+                <div class="card_item w_30 h_100 d_flex flex_wrap">      
+                    <div class="card w_100 h_50 d_flex align_center">
+                        <h3 class="uppercase w_70 line_h">Nome Passeggero</h3>
+                    </div>
+                    <!-- Contenuto da Inserire con JS -->
+                    <div class="card w_100 h_50 d_flex align_center">
+                        <h3 class="text_light h3_lg"><em>Inserisci con JS</em></h3>
+                    </div>
+                </div>
+                <!-- Offerta e dettaglio biglietto -->
+                <div class="card_item w_70 h_100 d_flex flex_wrap">
+                    <!-- Titoli nel dettaglio biglietto -->
+                    <div class="card_body w_100 h_50 d_flex justify_center align_center">
+                        <!-- Offerta -->
+                        <div class="card w_25 h_100 d_flex justify_center align_center">
+                            <h3>Offerta</h3>
+                        </div>
+                        <!-- Carrozza -->
+                        <div class="card w_25 h_100 d_flex justify_center align_center">
+                            <h3>Carrozza</h3>
+                        </div>
+                        <!-- Codice CP -->
+                        <div class="card w_25 h_100 d_flex justify_center align_center">
+                            <h3>Codice CP</h3>
+                        </div>
+                        <!-- Costo biglietto -->
+                        <div class="card w_25 h_100 d_flex justify_center text_center align_center">
+                            <h3>Costo biglietto</h3>
+                        </div>              
+                    </div>
+                    <!-- Contenuto da rilasciare con JS -->
+                    <div class="card_body w_100 h_50 d_flex justify_center align_center">
+                        <!-- Offerta -->
+                        <div class="card w_25 h_100 d_flex justify_center align_center">
+                            <span class="text_light" id="under_sale">Inserisci con JS</span>
+                        </div>
+                        <!-- Carrozza -->
+                        <div class="card w_25 h_100 d_flex justify_center align_center">
+                            <span class="text_light" id="carrozza">Inserisci con JS</span>
+                        </div>
+                        <!-- Codice CP -->
+                        <div class="card w_25 h_100 d_flex justify_center align_center">
+                            <span class="text_light" id="CPCode">Inserisci con JS</span>
+                        </div>
+                        <!-- Costo biglietto -->
+                        <div class="card w_25 h_100 d_flex justify_center text_center align_center">
+                            <span class="text_light" id="price">Inserisci con JS</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
-
         </div>
-    </div>
-
-
+    </main>
 
     <!-- Link a Javascript -->
     <script src="./assets/js/main.js"></script>

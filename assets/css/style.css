@@ -8,13 +8,22 @@
 /*#region Testi e orientamento */
 
 /* Utilities Testi e Titoli */
+
+/* Text - transform */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.h3_lg {
+  font-size: 1.4rem;
+}
+
 h2 {
   color: var(--h2_colors);
 }
 
-h2,
-h3 {
-  text-transform: uppercase;
+.line_h {
+  line-height: 1.45rem;
 }
 
 /* Testo negli input */
@@ -30,7 +39,6 @@ select {
   padding: 0.2rem 0% 0.2rem 0%;
   border: 0;
 }
-
 #genera,
 #annulla {
   font-size: 1.1rem;
@@ -40,11 +48,11 @@ select {
   border: 0;
 }
 
+/* Stile bordi bottoni */
 .border_style_genera {
   border: 2px solid purple;
   border-radius: 5px;
 }
-
 .border_style {
   border: 1px solid var(--bg_borders);
   border-radius: 5px;
@@ -53,6 +61,11 @@ select {
 /* Testi light */
 .span_light {
   color: var(--bg_borders);
+}
+
+/* DA RIMUOVERE */
+.text_light {
+  color: lightslategrey;
 }
 
 /* Allineamento testo */
@@ -95,7 +108,6 @@ body {
   background-color: crimson;
   filter: opacity(50%);
 }
-
 .op_50 {
   filter: opacity(50%);
 }
@@ -113,7 +125,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 /* Float + clearfix */
 .d_float {
   float: left;
@@ -169,6 +180,9 @@ body {
 .w_33 {
   width: calc(100% / 3);
 }
+.w_25 {
+  width: 25%;
+}
 
 /* Utilities - Altezza */
 .h_sm {
@@ -197,6 +211,9 @@ body {
 /*#region Padding e Margin */
 
 /* Padding */
+.pt_1 {
+  padding-top: 1rem;
+}
 .pt_2 {
   padding-top: 2rem;
 }
@@ -220,5 +237,9 @@ body {
 .mt_1 {
   margin-top: 1rem;
 }
+.mb_1 {
+  margin-bottom: 1rem;
+}
+
 
 /*#endregion */
