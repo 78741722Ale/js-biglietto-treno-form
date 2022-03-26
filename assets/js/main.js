@@ -40,21 +40,19 @@ console.log(price_for_km);
 /// prezzo totale del viaggio in base ai KM, per persone tra i 18 anni e i 64
 let price_adults = (price_for_km * userKilometers);
 
-
-// variabile - età dichiarate
-const under_age = "Minorenne";
-console.log(Minorenne);
-document.getElementById("Minorenne").innerHTML = under_age;
-// 
-const over_age = "Anziano";
-console.log(Anziano);
-document.getElementById("Anziano").innerHTML = over_age;
-
-
-// Sconto per Under 18
+// Variabili sconti
 const sales_under_age = 0.8;
 const sales_over_age = 0.6;
 
+//
+let minorenne = (price_adults * sales_under_age);
+console.log(minorenne);
+//
+let adults = price_adults;
+console.log(adults);
+// 
+let anziano = (price_adults * sales_over_age);
+console.log(anziano);
 
 /// Dettagli Biglietto
 
@@ -69,7 +67,7 @@ console.log(`Il numero del codice QR ${numero_cpcode}`);
 /// Dettagli del biglietto, al click del "genera"
 function ticket_name() {
     document.getElementById("name").value = userName;
-    document.getElementById("kilometers").value = userKilometers; 
+    document.getElementById("kilometers").value = userKilometers;
     document.getElementById("carrozza").value = numero_carrozza;
     document.getElementById("CPCode").value = numero_cpcode;
     document.getElementById("first_name").value = first_name;

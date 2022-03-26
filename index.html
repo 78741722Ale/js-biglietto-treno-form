@@ -38,12 +38,12 @@
                 </div>
                 <!-- selezione fascia d'età -->
                 <div class="card w_33 text_center h_100 d_flex justify_center align_end">
-                    <form action="#">
+                    <form>
                         <label class="span_light" for="Age">Fascia d'età</label><br>
                         <select class="mt_1 w_100 text_center border_style" id="Age">
-                            <option id="Minorenne" value=""></option>
-                            <option id="Maggiorenne" value=""></option>
-                            <option id="Anziano" value=""></option>
+                            <option class="Minorenne" value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
                         </select>
                     </form>
                 </div>
@@ -61,16 +61,16 @@
             <h2 class="uppercase">il tuo biglietto</h2>
         </div>
         <!-- Secondo container - il tuo biglietto -->
-        <div class="row h_lg w_100 bg_light d_flex flex_wrap justify_center">
+        <div class="row h_lg w_100 bg_light d_flex flex_wrap justify_center pb_sm">
             <!-- titolo dettaglio passeggeri -->
             <div class="col h_20 w_90 m_auto d_flex align_end">
                 <h3 class="uppercase">Dettaglio Passeggeri</h3>
             </div>
             <!-- Contenuto -->
-            <div class="col h_80 w_90 m_auto d_flex">
+            <div class="col h_70 w_90 m_auto d_flex border_container">
                 <!-- Nome passeggero -->
                 <div class="card_item bg_details w_30 h_100 d_flex flex_wrap">
-                    <!--   -->
+                    <!-- Titolo  -->
                     <div class="card w_100 h_50 d_flex align_center">
                         <h3 class="uppercase w_70 line_h ml_1">Nome Passeggero</h3>
                     </div>
@@ -111,19 +111,19 @@
                     <div class="card_body w_100 h_50 d_flex justify_center align_center">
                         <!-- Offerta -->
                         <div class="card w_25 h_100 d_flex justify_center align_center">
-                            <span class="text_light" id="under_sale">Inserisci con JS</span>
+                            <input type="text" value="" class="text_center details_text w_70"></input>
                         </div>
                         <!-- Carrozza -->
                         <div class="card w_25 h_100 d_flex justify_center align_center">
-                            <input type="text" id="carrozza" value="" class="text_center"></input>
+                            <input type="text" id="carrozza" value="" class="text_center details_text w_70"></input>
                         </div>
                         <!-- Codice CP -->
                         <div class="card w_25 h_100 d_flex justify_center align_center">
-                            <input type="text" id="CPCode" value="" class="text_center"></input>
+                            <input type="text" id="CPCode" value="" class="text_center details_text w_70"></input>
                         </div>
                         <!-- Costo biglietto -->
-                        <div class="card w_25 h_100 d_flex justify_center text_center align_center">
-                            <span class="text_light" id="price">Inserisci con JS</span>
+                        <div class="card w_33 h_100 d_flex justify_center text_center align_center">
+                            <span class="text_center details_text w_max_c" id="price">Inserisci con JS</span>
                         </div>
                     </div>
                 </div>
