@@ -45,14 +45,20 @@ const sales_under_age = 0.8;
 const sales_over_age = 0.6;
 
 //
+const Minore = "Minorenne"
 let minorenne = (price_adults * sales_under_age);
 console.log(minorenne);
+document.getElementById("minorenne").innerHTML = Minore;
 //
+const Adulto = "Adulto"
 let adults = price_adults;
 console.log(adults);
+document.getElementById("adulto").innerHTML = Adulto;
 // 
+const Anziano = "Anziano"
 let anziano = (price_adults * sales_over_age);
 console.log(anziano);
+document.getElementById("anziano").innerHTML = Anziano;
 
 /// Dettagli Biglietto
 
