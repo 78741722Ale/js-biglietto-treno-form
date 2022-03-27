@@ -13,10 +13,10 @@
 // Nome e cognome
 const first_name = prompt("Inserisci il tuo nome");
 const last_name = prompt("Inserisci il tuo cognome");
-console.log(first_name, last_name);
+// console.log(first_name, last_name);
 // Nome Completo
 const userName = first_name + ' ' + last_name;
-console.log(userName);
+// console.log(userName);
 // Dichiarazione nel form
 document.getElementById("name").value = userName;
 
@@ -35,16 +35,17 @@ if (isNaN(`${userKilometers}`)) {
 ///
 
 // Stato ed età passeggeri , variabili 
-userAge = document.getElementById('userAge').value;
+const userAge = document.getElementById("userAge").value;
 console.log(userAge);
 // costanti fisse - prezzo al km
 let price_for_km = 0.21;
 console.log(price_for_km);
 
 // Variabile per dimostrare dettaglio offerta
-let message;
+let message ="";
+console.log(message);
 // visualizzazione dell'offerta al genera 
-document.getElementById('offerta').innerHTML = message;
+document.getElementById("offerta").value = message;
 
 /// prezzo totale del viaggio in base ai KM, per persone tra i 18 anni e i 64 (adulti)
 let costo_totale = price_for_km * userKilometers;
@@ -52,29 +53,36 @@ console.log(costo_totale);
 // Sconti destinati ad età minorenne e over 65
 const sales_under_age = 0.8;
 const sales_over_age = 0.6;
+console.clear();
 
 //
-if (userAge == 'Minorenne') {
-    costo_totale = costo_totale * sales_under_age;
-    message = 'Minorenne';
-} else if (userAge == 'Anziano') {
-    costo_totale = costo_totale * sales_over_age;
+if (userAge === 'Minorenne') {
+    costo_under = costo_totale * sales_under_age;
+    console.log(costo_under);
     message = 'Anziano';
-};
+} else if (userAge === 'Anziano') {
+    costo_over = costo_totale * sales_over_age;
+    console.log(costo_over);
+    message = 'Anziano';
+} else if (userAge === 'Adulto') {
+    costo_normale = costo_totale;
+    console.log(costo_normale);
+    message = `Adulto`;
+}
 
 /// Dettagli Biglietto
 
 // Carrozza 
 const numero_carrozza = Math.floor(Math.random() * 9) + 1;
-console.log(`Il numero della carrozza è ${numero_carrozza}`);
+
 
 // CPCode
 const numero_cpcode = Number("97928");
-console.log(`Il numero del codice QR ${numero_cpcode}`);
+
 
 /// Dettagli del biglietto, al click del "genera"
 document.getElementById("genera").addEventListener("click", function () {
-    document.getElementById("offerta").innerHTML = message;
+    document.getElementById("offerta").value = message;
     document.getElementById("name").value = userName;
     document.getElementById("kilometers").value = userKilometers;
     document.getElementById("carrozza").value = numero_carrozza;
@@ -86,18 +94,20 @@ document.getElementById("genera").addEventListener("click", function () {
 
 /// Dettagli rimossi al click dell'annulla
 document.getElementById("annulla").addEventListener("click", function () {
-    document.getElementById("offerta").value = ' ';
-    document.getElementById("name").value = ' ';
-    document.getElementById("kilometers").value = ' ';
-    document.getElementById("carrozza").value = ' ';
-    document.getElementById("CPCode").value = ' ';
-    document.getElementById("first_name").value = ' ';
-    document.getElementById("last_name").value = ' ';
-    document.getElementById("costo_totale").value = ' ';
+    document.getElementById("offerta").value = '';
+    document.getElementById("name").value = '';
+    document.getElementById("kilometers").value = '';
+    document.getElementById("carrozza").value = '';
+    document.getElementById("CPCode").value = '';
+    document.getElementById("first_name").value = '';
+    document.getElementById("last_name").value = '';
+    document.getElementById("costo_totale").value = '';
 });
 
-
-
+// CONSOLE LOG GENERALE
+console.log(first_name, last_name, userName);
+console.log(`Il numero della carrozza è ${numero_carrozza}`);
+console.log(`Il numero del codice QR ${numero_cpcode}`);
 
 
 
