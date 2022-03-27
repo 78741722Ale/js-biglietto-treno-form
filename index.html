@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Document checking completed. No errors or warnings to show. -->
+<!-- Esercizio consegnato non completato, rimasto completamente bloccato -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,6 @@
     <!-- Titolo pagina -->
     <title>js-biglietto-treno-form</title>
 </head>
-
 <body>
     <!-- Layout principale -->
     <main class="container">
@@ -26,7 +26,7 @@
                 <div class="card w_33 text_center h_100 d_flex justify_center align_end">
                     <form action="#">
                         <label class="span_light">Nome Cognome</label>
-                        <input class="mt_1 w_90 text_center border_style" type="text" id="name" placeholder="Inserisci">
+                        <input class="mt_1 w_90 text_center border_style" id="name" placeholder="Inserisci">
                     </form>
                 </div>
                 <!-- Input km da percorrere -->
@@ -39,11 +39,11 @@
                 <!-- selezione fascia d'età -->
                 <div class="card w_33 text_center h_100 d_flex justify_center align_end">
                     <form>
-                        <label class="span_light" for="Age">Fascia d'età</label><br>
-                        <select class="mt_1 w_100 text_center border_style" id="Age">
-                            <option id="minorenne"></option>
-                            <option id="adulto"></option>
-                            <option id="anziano"></option>
+                        <label class="span_light">Fascia d'età</label><br>
+                        <select class="mt_1 w_100 text_center border_style" id="userAge">
+                            <option value="Minorenne">Minorenne</option>
+                            <option value="Adulto">Maggiorenne</option>
+                            <option value="Anziano">Anziano</option>
                         </select>
                     </form>
                 </div>
@@ -51,9 +51,9 @@
             <!-- Bottoni Genera e annulla -->
             <div class="col w_33 m_auto h_50 d_flex justify_evenly align_center">
                 <!-- Bottone Genera -->
-                <button onclick="ticket_name()" class="border_style_genera" id="genera">Genera</button>
+                <button class="border_style_genera" id="genera">Genera</button>
                 <!-- Bottone Annulla -->
-                <button onclick="no_details()" class="border_style_genera" id="annulla">Annulla</button>
+                <button class="border_style_genera" id="annulla">Annulla</button>
             </div>
         </div>
         <!-- Secondo titolo - il tuo biglietto -->
@@ -111,26 +111,25 @@
                     <div class="card_body w_100 h_50 d_flex justify_center align_center">
                         <!-- Offerta -->
                         <div class="card w_25 h_100 d_flex justify_center align_center">
-                            <input type="text" value="" class="text_center details_text w_70"></input>
+                            <input type="text" id="offerta" class="text_center details_text w_70">
                         </div>
                         <!-- Carrozza -->
                         <div class="card w_25 h_100 d_flex justify_center align_center">
-                            <input type="text" id="carrozza" value="" class="text_center details_text w_70"></input>
+                            <input type="text" id="carrozza" value="" class="text_center details_text w_70">
                         </div>
                         <!-- Codice CP -->
                         <div class="card w_25 h_100 d_flex justify_center align_center">
-                            <input type="text" id="CPCode" value="" class="text_center details_text w_70"></input>
+                            <input type="text" id="CPCode" value="" class="text_center details_text w_70">
                         </div>
                         <!-- Costo biglietto -->
-                        <div class="card w_33 h_100 d_flex justify_center text_center align_center">
-                            <span class="text_center details_text w_max_c" id="price">Inserisci con JS</span>
+                        <div class="card w_25 h_100 d_flex justify_center align_center">
+                            <input type="text" id="costo_totale" class="text_center details_text w_70">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
     <!-- Link a Javascript -->
     <script src="./assets/js/main.js"></script>
 </body>
